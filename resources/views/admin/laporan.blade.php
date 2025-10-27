@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="min-h-screen bg-gradient-to-br from-sky-50 to-blue-100 py-10 px-6">
-        <div class="max-w-3xl mx-auto bg-white/90 backdrop-blur-sm border border-blue-200 rounded-2xl shadow-xl p-8">
+        <div class="max-w-4xl mx-auto bg-white/90 backdrop-blur-sm border border-blue-200 rounded-2xl shadow-xl p-8">
             
             {{-- Header --}}
             <div class="flex items-center justify-between border-b border-blue-100 pb-4 mb-6">
@@ -11,8 +11,7 @@
                     </svg>
                     Detail Laporan Pengaduan
                 </h1>
-                <!-- sesuaiin sama nama file nya -->
-                <a href="dashboard" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition">
+                <a href="{{ route('dashboard') }}" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition">
                     ← Kembali
                 </a>
             </div>
@@ -37,19 +36,42 @@
                     <span class="inline-flex items-center px-4 py-1.5 text-sm font-semibold rounded-full bg-yellow-100 text-yellow-700">
                         Diproses
                     </span>
-
                     <button class="px-5 py-1.5 bg-blue-600 text-white text-sm font-semibold rounded-lg shadow hover:bg-blue-700 hover:shadow-md transition duration-200 ease-in-out">
                         Simpan
                     </button>
                 </div>
             </div>
 
-            {{-- Deskripsi --}}
-            <div class="mb-6">
-                <p class="text-sky-600 text-sm mb-1 font-medium">Deskripsi Pengaduan</p>
-                <div class="bg-blue-50 border border-blue-100 rounded-lg p-4 text-gray-700 leading-relaxed">
-                    Saya mengalami perlakuan tidak menyenangkan berupa ejekan rasis dari teman sekelas saat kegiatan
-                    belajar berlangsung.
+            {{-- Tempat + Deskripsi + Gambar --}}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 items-start">
+                
+                {{-- Kiri: Tempat & Deskripsi --}}
+                <div>
+                    <div class="mb-4">
+                        <p class="text-sky-600 text-sm mb-1 font-medium">Tempat Kejadian</p>
+                        <div class="bg-blue-50 border border-blue-100 rounded-lg p-4 text-gray-700 leading-relaxed">
+                            Ruang kelas XI RPL 2 – saat kegiatan pelajaran berlangsung.
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sky-600 text-sm mb-1 font-medium">Deskripsi Pengaduan</p>
+                        <div class="bg-blue-50 border border-blue-100 rounded-lg p-4 text-gray-700 leading-relaxed">
+                            Saya mengalami perlakuan tidak menyenangkan berupa ejekan rasis dari teman sekelas saat kegiatan
+                            belajar berlangsung.
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Kanan: Bukti Gambar --}}
+                <div>
+                    <p class="text-sky-600 text-sm mb-2 font-medium">Bukti Gambar</p>
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 flex flex-col items-center">
+                        <img src="{{ asset('images/bukti-kejadian.jpg') }}" 
+                             alt="Bukti Kejadian"
+                             class="rounded-xl shadow-md w-full object-cover border border-gray-200">
+                        <p class="text-sm text-gray-500 italic mt-2">Foto diambil oleh saksi pada saat kejadian.</p>
+                    </div>
                 </div>
             </div>
 
