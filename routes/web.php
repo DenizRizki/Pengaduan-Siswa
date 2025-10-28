@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
+// User/siswa
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,6 +25,12 @@ Route::middleware('auth')->group(function () {
   
 });
 
+// Admin
+Route::middleware(['admin'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    });
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
