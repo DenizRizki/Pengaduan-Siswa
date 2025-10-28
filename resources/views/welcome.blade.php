@@ -56,7 +56,7 @@
                     </p>
                 </div>
 
-                <x-form></x-form>
+                <x-form />
             </section>
 
 
