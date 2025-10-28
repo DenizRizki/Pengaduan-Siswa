@@ -1,5 +1,5 @@
-<x-app-layout>
-    <section class="min-h-screen bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 flex items-center justify-center py-12 px-6">
+
+    <section class="min-h-screen flex items-center justify-center py-12 px-6">
         <div class="bg-white shadow-2xl rounded-2xl w-full max-w-3xl p-10 border border-blue-200">
             <h1 class="text-4xl font-bold text-center text-blue-700 mb-3">Form Laporan Kejadian Siswa</h1>
             <p class="text-center text-blue-600 mb-10">
@@ -83,4 +83,4 @@
             </p>
         </div>
     </section>
-</x-app-layout>
+
