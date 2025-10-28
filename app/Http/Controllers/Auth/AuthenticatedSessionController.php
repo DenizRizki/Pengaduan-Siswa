@@ -28,8 +28,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended('/test');
-
+        return redirect()->intended(route('guru.index', absolute: false));
     }
 
     /**

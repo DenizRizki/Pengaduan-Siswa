@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GuruController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,10 @@ Route::middleware('auth')->group(function () {
       Route::get('/laporan', function () {
         return view('admin.laporan');
     })->name('laporan');
+});
+
+Route::middleware('auth')->group(function(){
+    Route::resource('/guru', GuruController::class);
 });
 
 require __DIR__.'/auth.php';
