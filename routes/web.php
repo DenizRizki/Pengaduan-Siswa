@@ -1,11 +1,19 @@
 <?php
 
+
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+// taruh route pengaduan di atas resource
+Route::get('/admin/pengaduan', [AdminController::class, 'pengaduan'])->name('admin.pengaduan');
+
+// ini baru resource admin (buat CRUD lain)
+Route::resource('admin', AdminController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
