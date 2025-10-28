@@ -35,11 +35,12 @@
 
                 <div class="flex gap-2 items-center">
                     <a href="#form"
-                        class="bg-transparent px-8 py-2 text-blue-800 border border-blue-800 rounded-full transition">
+                        class="bg-transparent hover:bg-blue-800 px-8 py-2 text-blue-800 hover:text-white border border-blue-800 rounded-full transition duration-300">
                         Adukan masalahmu!
                     </a>
 
-                    <a href="#FAQ" class="bg-blue-800 px-8 py-2 text-white border border-blue-800 rounded-full">
+                    <a href="#FAQ"
+                        class="bg-blue-800 hover:bg-blue-600 px-8 py-2 text-white border border-blue-800 hover:border-blue-600 rounded-full transition duration-300">
                         FAQ
                     </a>
                 </div>
@@ -114,51 +115,98 @@
 
         </main>
 
-        <!-- FAQ -->
-        <section id="FAQ"
-            class="bg-gradient-to-tl from-blue-100 via-zinc-50 to-blue-100 p-10 py-14 flex flex-col md:flex-row gap-5 items-start border-t border-zinc-300">
-            <div class="w-full md:w-1/3 pt-8">
-                <h2 class="text-5xl font-semibold uppercase">
-                    Punya pertanyaan tentang layanan kami?
-                </h2>
-            </div>
+        <div class="flex flex-col">
+            <!-- FAQ -->
+            <section id="FAQ"
+                class="bg-gradient-to-tl from-blue-100 via-zinc-50 to-blue-100 p-10 py-14 flex flex-col md:flex-row gap-5 items-start border-t border-zinc-300">
+                <div class="w-full md:w-1/3 pt-8">
+                    <h2 class="text-5xl font-semibold uppercase">
+                        Punya pertanyaan tentang layanan kami?
+                    </h2>
+                </div>
 
-            {{-- accordion FAQ --}}
-            <div
-                class="w-full md:w-2/3 h-fit bg-white px-5 flex flex-col divide-y divide-zinc-300 border border-zinc-300 rounded-md">
-                <x-accordion content="1" title="1. Apa itu layanan pengaduan siswa?">
-                    Layanan pengaduan siswa adalah sarana bagi seluruh siswa untuk menyampaikan keluhan, masukan, atau
-                    laporan terkait lingkungan sekolah, baik mengenai fasilitas, perilaku, maupun sistem belajar, agar
-                    dapat ditindaklanjuti oleh pihak sekolah
-                </x-accordion>
+                {{-- accordion FAQ --}}
+                <div
+                    class="w-full md:w-2/3 h-fit bg-white px-5 flex flex-col divide-y divide-zinc-300 border border-zinc-300 rounded-md">
+                    <x-accordion content="1" title="1. Apa itu layanan pengaduan siswa?">
+                        Layanan pengaduan siswa adalah sarana bagi seluruh siswa untuk menyampaikan keluhan, masukan,
+                        atau
+                        laporan terkait lingkungan sekolah, baik mengenai fasilitas, perilaku, maupun sistem belajar,
+                        agar
+                        dapat ditindaklanjuti oleh pihak sekolah
+                    </x-accordion>
 
-                <x-accordion content="2" title="2. Siapa saja yang boleh menggunakan layanan ini?">
-                    Semua siswa aktif SMK Informatika Pesat dapat menggunakan layanan pengaduan ini, tanpa terkecuali.
-                    Setiap laporan akan
-                    dijaga kerahasiaannya untuk melindungi identitas pelapor.
-                </x-accordion>
+                    <x-accordion content="2" title="2. Siapa saja yang boleh menggunakan layanan ini?">
+                        Semua siswa aktif SMK Informatika Pesat dapat menggunakan layanan pengaduan ini, tanpa
+                        terkecuali.
+                        Setiap laporan akan
+                        dijaga kerahasiaannya untuk melindungi identitas pelapor.
+                    </x-accordion>
 
-                <x-accordion content="3" title="3. Apakah pengaduan saya akan ditanggapi oleh pihak sekolah?">
-                    Ya, setiap laporan yang masuk akan diverifikasi oleh tim kesiswaan atau guru BK, lalu diteruskan
-                    kepada pihak yang berwenang untuk ditindaklanjuti sesuai jenis laporannya.
-                </x-accordion>
+                    <x-accordion content="3" title="3. Apakah pengaduan saya akan ditanggapi oleh pihak sekolah?">
+                        Ya, setiap laporan yang masuk akan diverifikasi oleh tim kesiswaan atau guru BK, lalu diteruskan
+                        kepada pihak yang berwenang untuk ditindaklanjuti sesuai jenis laporannya.
+                    </x-accordion>
 
-                <x-accordion content="4" title="4. Apa saja jenis pengaduan yang bisa dilaporkan?">
-                    Siswa dapat melaporkan berbagai hal seperti:
+                    <x-accordion content="4" title="4. Apa saja jenis pengaduan yang bisa dilaporkan?">
+                        Siswa dapat melaporkan berbagai hal seperti:
 
-                    <ul>
-                        <li>1. Tindakan bullying atau kekerasan di lingkungan sekolah</li>
+                        <ul>
+                            <li>1. Tindakan bullying atau kekerasan di lingkungan sekolah</li>
 
-                        <li>2. Fasilitas sekolah yang rusak atau kurang layak</li>
+                            <li>2. Fasilitas sekolah yang rusak atau kurang layak</li>
 
-                        <li>3. Ketidakadilan dalam perlakuan akademik atau non-akademik</li>
+                            <li>3. Ketidakadilan dalam perlakuan akademik atau non-akademik</li>
 
-                        <li>4. Keluhan terkait kegiatan sekolah lainnya</li>
-                    </ul>
-                </x-accordion>
+                            <li>4. Keluhan terkait kegiatan sekolah lainnya</li>
+                        </ul>
+                    </x-accordion>
 
-            </div>
-        </section>
+                </div>
+            </section>
+
+            <footer class="border-t border-gray-300 py-10">
+                <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-10">
+                    <!-- Kolom 1: Identitas Sekolah -->
+                    <div class="space-y-2">
+                        <h2 class="text-lg font-semibold">SMK Informatika Pesat IT XPRO</h2>
+                        <p class="text-sm leading-relaxed">
+                            Jl. Poras No.07, RT.01/RW.04, Loji, Kec. Bogor Bar., Kota Bogor, Jawa Barat 16117 <br>
+                            Telepon:  0877-1117-7442
+                        </p>
+                    </div>
+
+                    <!-- Kolom 2: Navigasi Cepat -->
+                    <div>
+                        <h2 class="text-lg font-semibold mb-3">Navigasi Cepat</h2>
+                        <ul class="space-y-1 text-sm">
+                            <li><a href="#" class="hover:underline">Beranda</a></li>
+                            <li><a href="#form" class="hover:underline">Form Pengaduan</a></li>
+                            <li><a href="#faq" class="hover:underline">FAQ</a></li>
+                            <li><a href="#about" class="hover:underline">Tentang Layanan</a></li>
+                            <li><a href="#" class="hover:underline">Kebijakan Privasi</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Kolom 3: Catatan Kerahasiaan -->
+                    <div class="max-w-sm">
+                        <h2 class="text-lg font-semibold mb-3">Catatan Kerahasiaan</h2>
+                        <p class="text-sm leading-relaxed">
+                            Semua laporan yang dikirim akan dijaga kerahasiaannya dan hanya digunakan untuk
+                            keperluan penanganan kasus di lingkungan sekolah.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Garis bawah kecil + copyright -->
+                <div
+                    class="max-w-6xl mx-auto px-6 mt-8 pt-6 border-t border-gray-200 text-sm flex flex-col md:flex-row justify-between items-center gap-2">
+                    <p>© 2025 Sistem Pengaduan Siswa. Dibuat oleh Tim Pengembang RPL.</p>
+                    <p class="text-xs">Dibuat dengan Laravel dan ❤️</p>
+                </div>
+            </footer>
+        </div>
+
 
     </div>
 
