@@ -39,11 +39,11 @@
                     <select name="kejadian"
                         class="w-full px-4 py-3 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-50">
                         <option value="">-- Pilih Jenis Kejadian --</option>
-                        <option value="Pembulian">Pembulian</option>
-                        <option value="Kekerasan Verbal">Kekerasan Verbal</option>
-                        <option value="Kekerasan Fisik">Kekerasan Fisik</option>
-                        <option value="Pelanggaran Tata Tertib">Pelanggaran Tata Tertib</option>
-                        <option value="Lainnya">Lainnya</option>
+                        <option value="pembulian">Pembulian</option>
+                        <option value="kekerasanverbal">Kekerasan Verbal</option>
+                        <option value="kekerasanfisik">Kekerasan Fisik</option>
+                        <option value="pelanggarantatatertib">Pelanggaran Tata Tertib</option>
+                        <option value="lainnya">Lainnya</option>
                     </select>
                 </div>
 
