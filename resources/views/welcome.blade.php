@@ -21,7 +21,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-zinc-50 text-zinc-900 font-[Geist] w-full min-h-screen flex flex-col items-center gap-5">
+<body class="bg-zinc-50 text-blue-950 font-[Geist] w-full min-h-screen flex flex-col items-center gap-5">
     <div class="bg-white w-full max-w-7xl flex flex-col gap-10 min-h-screen border-x border-zinc-300">
         {{-- hero --}}
         <div
@@ -60,15 +60,15 @@
         </main>
 
         <!-- FAQ -->
-        <section class="bg-gradient-to-tr from-blue-950 via-zinc-950 to-blue-950 p-5 py-14 flex gap-5 items-center border-t border-zinc-300">
-            <div class="w-1/3">
+        <section id="FAQ" class="bg-gradient-to-tr from-blue-950 via-zinc-950 to-blue-950 p-5 py-14 flex gap-5 items-start border-t border-zinc-300">
+            <div class="w-1/3 pt-8">
                 <h2 class="text-5xl text-white font-semibold uppercase">
                     Punya pertanyaan tentang layanan kami?
                 </h2>
             </div>
 
             {{-- accordion FAQ --}}
-            <div class="w-2/3 h-fit bg-white px-5 flex flex-col border border-zinc-300 rounded-md">
+            <div class="w-2/3 h-fit bg-white px-5 flex flex-col divide-y divide-zinc-300 border border-zinc-300 rounded-md">
                 <x-accordion content="1" title="1. Apa itu layanan pengaduan siswa?">
                     Layanan pengaduan siswa adalah sarana bagi seluruh siswa untuk menyampaikan keluhan, masukan, atau
                     laporan terkait lingkungan sekolah, baik mengenai fasilitas, perilaku, maupun sistem belajar, agar
