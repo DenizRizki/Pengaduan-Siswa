@@ -13,6 +13,17 @@ return new class extends Migration
     {
         Schema::create('forms', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_siswa');
+            $table->enum('kejadian', [
+                'pembulian',
+                'kekerasanverbal',
+                'kekerasanfisik',
+                'pelanggarantatatertib',
+                'lainnya'
+            ]);
+            $table->text('deskripsi')->nullable();
+            $table->string('tempat')->nullable();
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }

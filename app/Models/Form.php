@@ -6,5 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Form extends Model
 {
-    //
+     protected $fillable = [
+        'nama_siswa',
+        'kejadian',
+        'deskripsi', 
+        'tempat',
+        'gambar',
+    ];
 }
