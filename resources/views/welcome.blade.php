@@ -48,12 +48,14 @@
         {{-- main content --}}
         <main class="min-h-[600px] space-y-10 px-5 py-5">
 
-            <section class="flex flex-col gap-10 items-center">
+            <section class="flex flex-col gap-5 items-center">
                 <div class="space-y-2 text-center">
                     <h2 class="text-4xl lg:text-6xl 2xl:text-6xl font-semibold uppercase">Ada masalah di sekolah?</h2>
                     <p class="font-base leading-none">Keluhkan atau adukan masalahmu dengan mengisi form dibawah ini!
                     </p>
                 </div>
+
+                <x-form></x-form>
             </section>
 
 
