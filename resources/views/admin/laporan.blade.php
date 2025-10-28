@@ -50,7 +50,7 @@
                         <div class="mb-4">
                             <p class="text-sky-600 text-sm mb-1 font-medium">Tempat Kejadian</p>
                             <div class="bg-blue-50 border border-blue-100 rounded-lg p-4 text-gray-700 leading-relaxed">
-                                Ruang kelas XI RPL 2 – saat kegiatan pelajaran berlangsung.
+                                Ruang kelas XI RPL 2 - saat kegiatan pelajaran berlangsung.
                             </div>
                         </div>
 

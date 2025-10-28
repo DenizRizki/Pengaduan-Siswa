@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pengaduan;
 
 class admincontroller extends Controller
 {
@@ -11,12 +12,19 @@ class admincontroller extends Controller
      */
     public function index()
     {
-        //
+         return view('admin.dashboard');
     }
 
     /**
      * Show the form for creating a new resource.
      */
+
+    public function pengaduan()
+    {
+        
+
+        return view('admin.pengaduan'); // sementara tampilkan view aja
+    }
     public function create()
     {
         //

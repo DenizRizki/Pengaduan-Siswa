@@ -16,6 +16,7 @@
                             <th class="px-6 py-3 text-left">Deskripsi</th>
                             <th class="px-6 py-3 text-left">Tanggal</th>
                             <th class="px-6 py-3 text-center">Status</th>
+                            <th class="px-6 py-3 text-center">Aksi</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-700">
@@ -36,6 +37,12 @@
                                         <span class="bg-red-600 text-white px-3 py-1 rounded-full text-xs">Menunggu</span>
                                     @endif
                                 </td>
+                                 <td class="px-6 py-3 text-center">
+                                    <a href='/detail'
+                                         class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-1.5 rounded-lg shadow transition">
+                                            Detail
+                                    </a>
+                                 </td>
                             </tr>
                         @endforeach
                     </tbody>
