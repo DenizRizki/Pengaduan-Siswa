@@ -14,16 +14,7 @@ class AdminController extends Controller
     {
          return view('admin.Pengaduan');
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-
-      public function pengaduan()
-    {
-         $pengaduans = []; // nanti bisa ambil dari database
-    return view('admin.pengaduan', compact('pengaduans'));
-    }
+    
     public function create()
     {
         //
