@@ -47,6 +47,13 @@
                     </select>
                 </div>
 
+                <!-- Tempat Kejadian -->
+                <div>
+                    <label class="block text-sm font-semibold text-blue-800 mb-2">Tempat Kejadian</label>
+                    <input type="text" name="tempat" value="{{ old('tempat') }}" placeholder="Contoh: Lapangan sekolah, ruang kelas XI-3, dll"
+                        class="w-full px-4 py-3 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-50">
+                </div>
+
                 <!-- Deskripsi Kejadian -->
                 <div>
                     <label class="block text-sm font-semibold text-blue-800 mb-2">Deskripsi Kejadian</label>
@@ -54,19 +61,13 @@
                         class="w-full px-4 py-3 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-50 resize-none">{{ old('deskripsi') }}</textarea>
                 </div>
 
-                <!-- Tempat Kejadian -->
-                <div>
-                    <label class="block text-sm font-semibold text-blue-800 mb-2">Tempat Kejadian</label>
-                    <input type="text" name="tempat" value="{{ old('tempat') }}" placeholder="Contoh: Lapangan sekolah, ruang kelas 9A, dll"
-                        class="w-full px-4 py-3 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-50">
-                </div>
 
-                <!-- Upload Gambar Bukti -->
+                <!-- Upload Bukti -->
                 <div>
-                    <label class="block text-sm font-semibold text-blue-800 mb-2">Bukti Gambar</label>
-                    <input type="file" name="gambar" accept="image/*"
-                        class="w-full px-4 py-2 border border-blue-300 rounded-xl bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <p class="text-xs text-blue-600 mt-1">Format: JPG atau PNG (maks. 5MB)</p>
+                    <label class="block text-sm font-semibold text-blue-800 mb-2">Bukti Kejadian</label>
+                    <input type="file" name="gambar" accept="image/*,video/*,audio/*"
+                        class="w-full px-4 py-2 border border-blue-300 rounded-xl bg-blue-50 file:bg-transparent file:border-none focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <p class="text-xs text-blue-600 mt-1">Format: Video (MP4, dll), Gambar (PNG, JPEG, JPG, dll), Audio (MP3, dll)</p>
                 </div>
 
                 <!-- Tombol -->
