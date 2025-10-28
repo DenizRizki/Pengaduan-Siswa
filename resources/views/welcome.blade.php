@@ -23,7 +23,6 @@
 
 <body class="bg-zinc-50 text-zinc-900 font-[Geist] w-full min-h-screen flex flex-col items-center gap-5">
     <div class="bg-white w-full max-w-7xl flex flex-col gap-10 min-h-screen border-x border-zinc-300">
-
         {{-- hero --}}
         <div
             class="text-white w-full min-h-[70vh] px-5 py-5 bg-gradient-to-tl from-blue-950 via-zinc-950 to-blue-950 flex flex-col gap-5 justify-between rounded-b-3xl">
@@ -33,12 +32,12 @@
                 <p class="max-w-sm text-lg md:text-2xl font-light leading-tight">Tempat aman bagi siswa untuk
                     menyampaikan keluhan dan masukan.
                 </p>
-
+    
                 <div class="flex gap-2 items-center">
                     <a href="#" class="bg-transparent px-8 py-2 text-white border border-white rounded-full">
                         Adukan masalahmu!
                     </a>
-
+    
                     <a href="#FAQ" class="bg-white px-8 py-2 text-zinc-900 border border-zinc-300 rounded-full">
                         FAQ
                     </a>
@@ -47,7 +46,7 @@
         </div>
 
         {{-- main content --}}
-        <main class="space-y-10 px-5 py-5">
+        <main class="min-h-[600px] space-y-10 px-5 py-5">
 
             <section class="flex flex-col gap-10 items-center">
                 <div class="space-y-2 text-center">
@@ -61,9 +60,9 @@
         </main>
 
         <!-- FAQ -->
-        <section class="bg-zinc-100 p-5 py-14 flex gap-5 items-start">
+        <section class="bg-gradient-to-tr from-blue-950 via-zinc-950 to-blue-950 p-5 py-14 flex gap-5 items-start border-t border-zinc-300">
             <div class="w-1/3">
-                <h2 class="text-5xl font-semibold uppercase">
+                <h2 class="text-5xl text-white font-semibold uppercase">
                     Punya pertanyaan tentang layanan kami?
                 </h2>
             </div>
