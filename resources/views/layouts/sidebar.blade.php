@@ -14,9 +14,10 @@
             Dashboard
         </a>
 
-        <a href="#"
+        <a href="{{ route('admin.index') }}"
            class="flex items-center gap-3 p-4 mx-3 mt-2 rounded-lg text-white
-           hover:bg-sky-300 hover:text-black transition">
+           hover:bg-sky-300 hover:text-black transition
+           {{ request()->routeIs('admin.index') ? 'bg-sky-500 text-black' : '' }}">
             <i class="ri-file-list-3-line text-2xl"></i>
             Pengaduan
         </a>

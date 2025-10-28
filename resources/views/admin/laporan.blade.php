@@ -1,4 +1,4 @@
-    <x-app-layout>
+    <x-guru-layout>
         <div class="min-h-screen bg-gradient-to-br from-sky-50 to-blue-100 py-10 px-6">
             <div class="max-w-4xl mx-auto bg-white/90 backdrop-blur-sm border border-blue-200 rounded-2xl shadow-xl p-8">
                 
@@ -89,4 +89,4 @@
                 Pelayanan Pengaduan Sekolah • SMK Informatika Pesat 🌤️
             </div>
         </div>
-    </x-app-layout>
+    </x-guru-layout>

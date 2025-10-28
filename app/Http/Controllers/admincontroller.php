@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\pengaduan;
 use Illuminate\Http\Request;
 
 class admincontroller extends Controller
@@ -11,7 +12,7 @@ class admincontroller extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.Pengaduan');
     }
 
     /**
