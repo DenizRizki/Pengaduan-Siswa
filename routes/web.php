@@ -37,13 +37,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('form', FormController::class);
-      Route::get('/laporan', function () {
-        return view('admin.laporan');
-    })->name('laporan');
+     
 });
 
 Route::middleware('auth')->group(function(){
     Route::resource('/guru', GuruController::class);
+     Route::get('/detail', function () {
+        return view('admin.detail_laporan');
+    })->name('laporan');
 });
 
 require __DIR__.'/auth.php';
