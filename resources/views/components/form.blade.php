@@ -2,9 +2,9 @@
     <section class="min-h-screen flex items-center justify-center py-12 px-6">
         <div class="bg-white shadow-2xl rounded-2xl w-full max-w-3xl p-10 border border-blue-200">
             <h1 class="text-4xl font-bold text-center text-blue-700 mb-3">Form Laporan Kejadian Siswa</h1>
-            <p class="text-center text-blue-600 mb-10">
+            {{-- <p class="text-center text-blue-600 mb-10">
                 Silakan isi form di bawah ini dengan lengkap agar laporan dapat segera ditindaklanjuti oleh pihak sekolah.
-            </p>
+            </p> --}}
 
             <form method="POST" action="{{ route('form.store') }}" enctype="multipart/form-data" class="space-y-6">
                 @csrf
@@ -39,12 +39,19 @@
                     <select name="kejadian"
                         class="w-full px-4 py-3 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-50">
                         <option value="">-- Pilih Jenis Kejadian --</option>
-                        <option value="Pembulian">Pembulian</option>
-                        <option value="Kekerasan Verbal">Kekerasan Verbal</option>
-                        <option value="Kekerasan Fisik">Kekerasan Fisik</option>
-                        <option value="Pelanggaran Tata Tertib">Pelanggaran Tata Tertib</option>
-                        <option value="Lainnya">Lainnya</option>
+                        <option value="pembulian">Pembulian</option>
+                        <option value="kekerasanverbal">Kekerasan Verbal</option>
+                        <option value="kekerasanfisik">Kekerasan Fisik</option>
+                        <option value="pelanggarantatatertib">Pelanggaran Tata Tertib</option>
+                        <option value="lainnya">Lainnya</option>
                     </select>
+                </div>
+
+                <!-- Tempat Kejadian -->
+                <div>
+                    <label class="block text-sm font-semibold text-blue-800 mb-2">Tempat Kejadian</label>
+                    <input type="text" name="tempat" value="{{ old('tempat') }}" placeholder="Contoh: Lapangan sekolah, ruang kelas XI-3, dll"
+                        class="w-full px-4 py-3 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-50">
                 </div>
 
                 <!-- Deskripsi Kejadian -->
@@ -54,19 +61,13 @@
                         class="w-full px-4 py-3 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-50 resize-none">{{ old('deskripsi') }}</textarea>
                 </div>
 
-                <!-- Tempat Kejadian -->
-                <div>
-                    <label class="block text-sm font-semibold text-blue-800 mb-2">Tempat Kejadian</label>
-                    <input type="text" name="tempat" value="{{ old('tempat') }}" placeholder="Contoh: Lapangan sekolah, ruang kelas 9A, dll"
-                        class="w-full px-4 py-3 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-50">
-                </div>
 
-                <!-- Upload Gambar Bukti -->
+                <!-- Upload Bukti -->
                 <div>
-                    <label class="block text-sm font-semibold text-blue-800 mb-2">Bukti Gambar</label>
-                    <input type="file" name="gambar" accept="image/*"
-                        class="w-full px-4 py-2 border border-blue-300 rounded-xl bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <p class="text-xs text-blue-600 mt-1">Format: JPG atau PNG (maks. 5MB)</p>
+                    <label class="block text-sm font-semibold text-blue-800 mb-2">Bukti Kejadian</label>
+                    <input type="file" name="gambar" accept="image/*,video/*,audio/*"
+                        class="w-full px-4 py-2 border border-blue-300 rounded-xl bg-blue-50 file:bg-transparent file:border-none focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <p class="text-xs text-blue-600 mt-1">Format: Video (MP4, dll), Gambar (PNG, JPEG, JPG, dll), Audio (MP3, dll)</p>
                 </div>
 
                 <!-- Tombol -->

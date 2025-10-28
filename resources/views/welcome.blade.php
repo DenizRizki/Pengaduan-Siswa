@@ -8,37 +8,38 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-zinc-50 text-blue-950 font-[Geist] w-full min-h-screen flex flex-col items-center gap-5">
+<body
+    class="bg-fixed bg-gradient-to-tr from-sky-100 via-white to-sky-50 text-blue-800 font-[Poppins] w-full min-h-screen flex flex-col items-center gap-5">
     <div class="bg-white w-full max-w-7xl flex flex-col gap-10 min-h-screen border-x border-zinc-300">
         {{-- hero --}}
         <div
-            class="text-white w-full min-h-[70vh] px-5 py-5 bg-gradient-to-tl from-blue-950 via-zinc-950 to-blue-950 flex flex-col gap-5 justify-between rounded-b-3xl">
-            <h1 class="max-w-4xl text-6xl md:text-7xl xl:text-8xl font-semibold">Pengaduan Siswa SMK Informatika Pesat
+            class="w-full min-h-[70vh] px-5 py-5 bg-gradient-to-tl from-blue-100 via-zinc-50 to-sky-50 flex flex-col gap-5 justify-between border border-zinc-300 rounded-b-[34px]">
+            <h1
+                class="bg-gradient-to-tr from-blue-900 via-blue-800 to-blue-600 bg-clip-text text-transparent max-w-4xl text-6xl md:text-7xl xl:text-8xl font-semibold">
+                Pengaduan Siswa SMK Informatika Pesat
                 IT XPRO</h1>
             <div class="w-full flex flex-col md:flex-row gap-5 justify-between md:items-end">
                 <p class="max-w-sm text-lg md:text-2xl font-light leading-tight">Tempat aman bagi siswa untuk
                     menyampaikan keluhan dan masukan.
                 </p>
-    
+
                 <div class="flex gap-2 items-center">
-                    <a href="#" class="bg-transparent px-8 py-2 text-white border border-white rounded-full">
+                    <a href="#form"
+                        class="bg-transparent px-8 py-2 text-blue-800 border border-blue-800 rounded-full transition">
                         Adukan masalahmu!
                     </a>
-    
-                    <a href="#FAQ" class="bg-white px-8 py-2 text-zinc-900 border border-zinc-300 rounded-full">
+
+                    <a href="#FAQ" class="bg-blue-800 px-8 py-2 text-white border border-blue-800 rounded-full">
                         FAQ
                     </a>
                 </div>
@@ -46,31 +47,85 @@
         </div>
 
         {{-- main content --}}
-        <main class="min-h-[600px] space-y-10 px-5 py-5">
+        <main class="space-y-14 px-10 py-5">
 
-            <section class="flex flex-col gap-5 items-center">
+            <section class="flex flex-col gap-2 items-center">
                 <div class="space-y-2 text-center">
-                    <h2 class="text-4xl lg:text-6xl 2xl:text-6xl font-semibold uppercase">Ada masalah di sekolah?</h2>
+                    <h2 class="text-4xl lg:text-5xl 2xl:text-6xl font-semibold uppercase">Ada masalah di sekolah?</h2>
                     <p class="font-base leading-none">Keluhkan atau adukan masalahmu dengan mengisi form dibawah ini!
                     </p>
                 </div>
 
-                <x-form></x-form>
+                <div class="flex flex-col-reverse md:flex-row gap-5 items-center">
+                    <div class="space-y-14 w-full md:w-1/3">
+                        <div class="space-y-5">
+                            <h2 class="max-w-xl text-6xl font-semibold uppercase">Suaramu Penting!</h2>
+                            <p class="text-sm text-blue-900 leading-relaxed">
+                                Kami percaya setiap siswa berhak merasa aman dan nyaman di lingkungan sekolah.
+                                Melalui formulir ini, kamu bisa melaporkan kejadian yang tidak menyenangkan, memberi
+                                masukan, atau menyampaikan saran untuk membuat sekolah kita jadi tempat yang lebih baik.
+
+                                Jangan takut untuk berbicara. Laporanmu akan kami jaga kerahasiaannya.
+                            </p>
+                        </div>
+
+                        <div class="flex">
+                            <img src="https://images.unsplash.com/photo-1664786496152-c09bb24791b5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
+                                alt="gambar"
+                                class="relative bg-zinc-100 w-1/3 aspect-square object-cover border-4 border-white rounded-xl rotate-3">
+
+                            <img src="https://plus.unsplash.com/premium_photo-1661380704283-38adf12c3f5e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
+                                alt="gambar"
+                                class="relative bg-zinc-100 w-1/3 aspect-square object-cover border-4 border-white rounded-xl -left-2 -rotate-1">
+
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1532"
+                                alt="gambar"
+                                class="relative bg-zinc-100 w-1/3 aspect-square object-cover border-4 border-white rounded-xl -left-4 rotate-3">
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-2/3 scroll-mt-5" id="form">
+                        <x-form />
+                    </div>
+                </div>
+            </section>
+
+            {{-- tentang kami --}}
+            <section class="flex flex-col md:flex-row gap-5 items-center justify-between">
+                <div class="space-y-5 max-w-2xl">
+                    <h2 class="text-6xl font-semibold uppercase">Tentang layanan pengaduan
+                        siswa
+                    </h2>
+                    <p class="text-sm text-blue-900 leading-relaxed">
+                        Layanan ini disediakan oleh SMK Informatika Pesat IT XPRO sebagai wadah bagi siswa untuk
+                        menyampaikan laporan terkait kejadian, pelanggaran, maupun masalah yang terjadi di lingkungan
+                        sekolah.
+
+                        Setiap laporan akan diverifikasi dan ditindaklanjuti secara profesional oleh pihak sekolah. Kami
+                        menjamin kerahasiaan data pelapor sesuai dengan kebijakan sekolah.
+                    </p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1570616969692-54d6ba3d0397?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1122"
+                    alt="gambar"
+                    class="bg-zinc-100 w-full md:w-1/3 aspect-square object-cover border border-zinc-300 rounded-xl md:rotate-3">
+
             </section>
 
 
         </main>
 
         <!-- FAQ -->
-        <section id="FAQ" class="bg-gradient-to-tr from-blue-950 via-zinc-950 to-blue-950 p-5 py-14 flex gap-5 items-start border-t border-zinc-300">
-            <div class="w-1/3 pt-8">
-                <h2 class="text-5xl text-white font-semibold uppercase">
+        <section id="FAQ"
+            class="bg-gradient-to-tl from-blue-100 via-zinc-50 to-blue-100 p-10 py-14 flex flex-col md:flex-row gap-5 items-start border-t border-zinc-300">
+            <div class="w-full md:w-1/3 pt-8">
+                <h2 class="text-5xl font-semibold uppercase">
                     Punya pertanyaan tentang layanan kami?
                 </h2>
             </div>
 
             {{-- accordion FAQ --}}
-            <div class="w-2/3 h-fit bg-white px-5 flex flex-col divide-y divide-zinc-300 border border-zinc-300 rounded-md">
+            <div
+                class="w-full md:w-2/3 h-fit bg-white px-5 flex flex-col divide-y divide-zinc-300 border border-zinc-300 rounded-md">
                 <x-accordion content="1" title="1. Apa itu layanan pengaduan siswa?">
                     Layanan pengaduan siswa adalah sarana bagi seluruh siswa untuk menyampaikan keluhan, masukan, atau
                     laporan terkait lingkungan sekolah, baik mengenai fasilitas, perilaku, maupun sistem belajar, agar
