@@ -9,7 +9,7 @@
                 <div class="relative">
                     <i class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-600"></i>
                     <input type="text" name="search" placeholder="Search..."
-                        class="rounded-lg w-[18vw] bg-white pl-10 py-2 shadow-sm focus:ring-2 focus:ring-sky-500 outline-none" />
+                        class="rounded-lg w-[18vw] bg-white pl-10 py-2 text-gray-600 shadow-sm focus:ring-2 focus:ring-sky-500 outline-none" />
                 </div>
             </form>
         </div>

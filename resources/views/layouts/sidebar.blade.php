@@ -7,9 +7,9 @@
 
     <nav class="flex-1 mt-4">
         <a href="{{ route('guru.index') }}"
-           class="flex items-center gap-3 p-4 mx-3 rounded-lg text-white
+           class="flex items-center gap-3 p-4 mx-3 rounded-lg
            hover:bg-sky-300 hover:text-black transition
-           {{ request()->routeIs('guru.index') ? 'bg-sky-300 text-black' : '' }}">
+           {{ request()->routeIs('guru.index') ? 'bg-sky-500 text-black' : '' }}">
             <i class="ri-bar-chart-fill text-2xl"></i>
             Dashboard
         </a>
