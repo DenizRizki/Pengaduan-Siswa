@@ -60,7 +60,7 @@
         </main>
 
         <!-- FAQ -->
-        <section class="bg-gradient-to-tr from-blue-950 via-zinc-950 to-blue-950 p-5 py-14 flex gap-5 items-start border-t border-zinc-300">
+        <section class="bg-gradient-to-tr from-blue-950 via-zinc-950 to-blue-950 p-5 py-14 flex gap-5 items-center border-t border-zinc-300">
             <div class="w-1/3">
                 <h2 class="text-5xl text-white font-semibold uppercase">
                     Punya pertanyaan tentang layanan kami?
