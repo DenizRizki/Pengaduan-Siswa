@@ -2,22 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\pengaduan;
 use Illuminate\Http\Request;
 
-class admincontroller extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.Pengaduan');
+         return view('admin.dashboard');
     }
 
     /**
      * Show the form for creating a new resource.
      */
+
+      public function pengaduan()
+    {
+         $pengaduans = []; // nanti bisa ambil dari database
+    return view('admin.pengaduan', compact('pengaduans'));
+    }
     public function create()
     {
         //
