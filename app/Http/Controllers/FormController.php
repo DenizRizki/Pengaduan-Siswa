@@ -11,7 +11,7 @@ class FormController extends Controller
      */
     public function index()
     {
-        return view('siswa.create');
+       //
     }
 
     /**
@@ -19,7 +19,7 @@ class FormController extends Controller
      */
     public function create()
     {
-        //
+         return view('siswa.form');
     }
 
     /**
