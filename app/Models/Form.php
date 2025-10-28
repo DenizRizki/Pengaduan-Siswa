@@ -12,5 +12,7 @@ class Form extends Model
         'deskripsi', 
         'tempat',
         'gambar',
+        'video',
+        'audio',
     ];
 }
