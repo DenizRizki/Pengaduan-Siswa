@@ -14,9 +14,6 @@ Route::get('/', function () {
 
 // taruh route pengaduan di atas resource
 
-// ini baru resource admin (buat CRUD lain)
-Route::resource('admin', AdminController::class);
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
