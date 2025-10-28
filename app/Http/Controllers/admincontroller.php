@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Laporan;
 
 class AdminController extends Controller
 {
@@ -41,7 +42,8 @@ class AdminController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $laporan = laporan::findOrfail($id);
+        return view('admin.detail_laporan', compact('laporan'));
     }
 
     /**

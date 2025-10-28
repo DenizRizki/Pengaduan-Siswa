@@ -1,8 +1,16 @@
-<x-guru-layout>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Laporan Pengaduan - UI/UX Mockup</title>
+    <script src="https://cdn.tailwindcss.com"></script> 
+</head>
+<body>
+
     <div class="min-h-screen bg-gradient-to-br from-sky-50 to-blue-100 py-10 px-6">
         <div class="max-w-4xl mx-auto bg-white/90 backdrop-blur-sm border border-blue-200 rounded-2xl shadow-xl p-8">
 
-            {{-- Header --}}
             <div class="flex items-center justify-between border-b border-blue-100 pb-4 mb-6">
                 <h1 class="text-2xl font-bold text-sky-700 flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-sky-600" fill="none" viewBox="0 0 24 24"
@@ -12,13 +20,12 @@
                     </svg>
                     Detail Laporan Pengaduan
                 </h1>
-                <a href="{{ route('guru.index') }}"
+                <a href="#"
                     class="text-sm text-blue-600 hover:text-blue-800 font-medium transition">
                     ← Kembali
                 </a>
             </div>
 
-            {{-- Info Pelapor --}}
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div class="bg-sky-50 p-3 rounded-lg border border-sky-100">
                     <p class="text-sky-600 text-sm">Nama Pelapor</p>
@@ -33,19 +40,14 @@
                     <p class="font-semibold text-gray-800">Bullying / Rasis</p>
                 </div>
 
-                {{-- Status + Tombol Simpan --}}
                 <div class="bg-sky-50 p-3 rounded-lg border border-sky-100 flex items-center justify-between">
-                    {{-- Dropdown Status --}}
-                    <form action="{{ route('laporan.updateStatus', $laporan->id) }}" method="POST"
+                    <form action="#" method="POST"
                         class="flex items-center space-x-2">
-                        @csrf
-                        @method('PUT')
                         <select name="status"
                             class="px-3 py-1.5 text-sm font-semibold rounded-full border border-yellow-200 bg-yellow-50 text-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:border-yellow-400 cursor-pointer">
-                            <option value="diproses" {{ $laporan->status == 'diproses' ? 'selected' : '' }}>Diproses
-                            </option>
-                            <option value="selesai" {{ $laporan->status == 'selesai' ? 'selected' : '' }}>Selesai</option>
-                            <option value="ditolak" {{ $laporan->status == 'ditolak' ? 'selected' : '' }}>Ditolak</option>
+                            <option value="diproses" selected>Diproses</option>
+                            <option value="selesai">Selesai</option>
+                            <option value="ditolak">Ditolak</option>
                         </select>
 
                         <button type="submit"
@@ -57,10 +59,8 @@
 
             </div>
 
-            {{-- Tempat + Deskripsi + Gambar --}}
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 items-start">
 
-                {{-- Kiri: Tempat & Deskripsi --}}
                 <div>
                     <div class="mb-4">
                         <p class="text-sky-600 text-sm mb-1 font-medium">Tempat Kejadian</p>
@@ -73,24 +73,21 @@
                         <p class="text-sky-600 text-sm mb-1 font-medium">Deskripsi Pengaduan</p>
                         <div class="bg-blue-50 border border-blue-100 rounded-lg p-4 text-gray-700 leading-relaxed">
                             Saya mengalami perlakuan tidak menyenangkan berupa ejekan rasis dari teman sekelas saat
-                            kegiatan
-                            belajar berlangsung.
+                            kegiatan belajar berlangsung.
                         </div>
                     </div>
                 </div>
 
-                {{-- Kanan: Bukti Gambar --}}
                 <div>
                     <p class="text-sky-600 text-sm mb-2 font-medium">Bukti Gambar</p>
                     <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 flex flex-col items-center">
-                        <img src="{{ asset('images/bukti-kejadian.jpg') }}" alt="Bukti Kejadian"
+                        <img src="https://via.placeholder.com/800x600?text=Bukti+Foto+Placeholder" alt="Bukti Kejadian"
                             class="rounded-xl shadow-md w-full object-cover border border-gray-200">
                         <p class="text-sm text-gray-500 italic mt-2">Foto diambil oleh saksi pada saat kejadian.</p>
                     </div>
                 </div>
             </div>
 
-            {{-- Tanggapan --}}
             <div>
                 <p class="text-sky-600 text-sm mb-1 font-medium">Tanggapan Admin</p>
                 <div class="bg-gray-100 border border-gray-200 p-4 rounded-lg text-gray-500 italic">
@@ -99,9 +96,9 @@
             </div>
         </div>
 
-        {{-- Footer --}}
         <div class="text-center mt-10 text-sm text-sky-700 font-medium opacity-80">
             Pelayanan Pengaduan Sekolah • SMK Informatika Pesat 🌤️
         </div>
     </div>
-</x-guru-layout>
+</body>
+</html>
