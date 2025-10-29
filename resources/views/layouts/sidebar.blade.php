@@ -9,14 +9,15 @@
         <a href="{{ route('guru.index') }}"
            class="flex items-center gap-3 p-4 mx-3 rounded-lg
            hover:bg-sky-300 hover:text-black transition
-           {{ request()->routeIs('guru.index') ? 'bg-sky-500 text-black' : '' }}">
+           {{ request()->routeIs('guru.index') ? 'bg-sky-500 text-black' : 'text-white' }}">
             <i class="ri-bar-chart-fill text-2xl"></i>
             Dashboard
         </a>
 
-        <a href="#"
-           class="flex items-center gap-3 p-4 mx-3 mt-2 rounded-lg text-white
-           hover:bg-sky-300 hover:text-black transition">
+        <a href="{{ route('pengaduan.index') }}"
+           class="flex items-center gap-3 p-4 mx-3 mt-2 rounded-lg
+           hover:bg-sky-300 hover:text-black transition
+           {{ request()->routeIs('pengaduan.index') ? 'bg-sky-500 text-black' : 'text-white' }}">
             <i class="ri-file-list-3-line text-2xl"></i>
             Pengaduan
         </a>

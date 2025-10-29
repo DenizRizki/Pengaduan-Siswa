@@ -13,16 +13,12 @@ Route::get('/', function () {
 });
 
 // taruh route pengaduan di atas resource
-// Route::get('/admin/pengaduan', [AdminController::class, 'pengaduan'])->name('admin.pengaduan');
-
-// ini baru resource admin (buat CRUD lain)
-Route::resource('admin', AdminController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 Route::middleware('auth')->group(function () {
-  
+    
 });
 
 // Admin
@@ -37,6 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('form', FormController::class);
+    Route::resource('/pengaduan', AdminController::class);
      
 });
 

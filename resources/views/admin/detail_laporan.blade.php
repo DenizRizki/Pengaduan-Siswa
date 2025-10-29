@@ -20,7 +20,7 @@
                     </svg>
                     Detail Laporan Pengaduan
                 </h1>
-                <a href="#"
+                <a href="/guru"
                     class="text-sm text-blue-600 hover:text-blue-800 font-medium transition">
                     ← Kembali
                 </a>
