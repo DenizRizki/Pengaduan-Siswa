@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Laporan;
 
 class AdminController extends Controller
 {
@@ -11,18 +12,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-         return view('admin.dashboard');
-    }
+         $pengaduans = Laporan::all();
 
-    /**
-     * Show the form for creating a new resource.
-     */
-
-      public function pengaduan()
-    {
-         $pengaduans = []; // nanti bisa ambil dari database
-    return view('admin.pengaduan', compact('pengaduans'));
+          return view('admin.Pengaduan', compact('pengaduans'));
     }
+    
     public function create()
     {
         //
@@ -41,7 +35,8 @@ class AdminController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $laporan = laporan::findOrfail($id);
+        return view('admin.detail_laporan', compact('laporan'));
     }
 
     /**
