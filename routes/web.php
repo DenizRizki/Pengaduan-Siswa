@@ -13,7 +13,7 @@ Route::get('/', function () {
 });
 
 // taruh route pengaduan di atas resource
-Route::get('/admin/pengaduan', [AdminController::class, 'pengaduan'])->name('admin.pengaduan');
+// Route::get('/admin/pengaduan', [AdminController::class, 'pengaduan'])->name('admin.pengaduan');
 
 // ini baru resource admin (buat CRUD lain)
 Route::resource('admin', AdminController::class);

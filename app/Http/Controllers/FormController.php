@@ -11,8 +11,7 @@ class FormController extends Controller
      */
     public function index()
     {
-         $siswa = Form::all();
-         return view('components.form', compact('siswa'));
+          //
     }
 
     /**
@@ -34,7 +33,7 @@ class FormController extends Controller
             'deskripsi' => 'nullable|string',
             'tempat' => 'nullable|string|max:255',
             'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
-            'video' => 'nullable|mimetypes:video/mp4,video/avi,video/mpeg,video/quicktime|max:10240',
+            'video' => 'nullable|mimetypes:video/mp4,video/avi,video/mpeg,video/quicktime|max:51200', 
             'audio' => 'nullable|mimetypes:audio/mpeg,audio/wav,audio/mp3|max:5120',
         ]);
 
@@ -62,7 +61,7 @@ class FormController extends Controller
             'audio' => $audioPath,
         ]);
 
-        return redirect()->route('admin.pengaduan')->with('success', 'Laporan berhasil ditambahkan!');
+        return view('welcome');
     }
 
     /**
