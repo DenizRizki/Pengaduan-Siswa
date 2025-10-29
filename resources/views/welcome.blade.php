@@ -23,7 +23,7 @@
     <div class="bg-white w-full max-w-7xl flex flex-col gap-10 min-h-screen border-x border-zinc-300">
         {{-- hero --}}
         <div
-            class="w-full min-h-[70vh] px-5 py-5 bg-gradient-to-tl from-blue-100 via-zinc-50 to-sky-50 flex flex-col gap-5 justify-between border border-zinc-300 rounded-b-[34px]">
+            class="w-full min-h-[80vh] px-5 py-5 bg-gradient-to-tl from-blue-100 via-zinc-50 to-sky-50 flex flex-col gap-5 justify-between border border-zinc-300 rounded-b-[34px]">
             <h1
                 class="bg-gradient-to-tr from-blue-900 via-blue-800 to-blue-600 bg-clip-text text-transparent max-w-4xl text-6xl md:text-7xl xl:text-8xl font-semibold">
                 Pengaduan Siswa SMK Informatika Pesat
