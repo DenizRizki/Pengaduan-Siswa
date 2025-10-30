@@ -27,11 +27,9 @@ Route::middleware('auth')->group(function () {
     // Form pengaduan siswa
     Route::resource('form', FormController::class);
 
-    // Halaman guru
-    Route::resource('guru', GuruController::class);
-
-    // Halaman detail laporan
-    Route::get('/detail', function () {
+Route::middleware('auth')->group(function(){
+    Route::resource('/guru', GuruController::class);
+    Route::post('/detail', function () {
         return view('admin.detail_laporan');
     })->name('laporan');
     Route::resource('pengaduan', AdminController::class);
