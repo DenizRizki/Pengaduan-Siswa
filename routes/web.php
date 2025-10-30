@@ -34,9 +34,6 @@ Route::middleware('auth')->group(function(){
     Route::get('/detail', function () {
         return view('admin.detail_laporan');
     })->name('laporan');
-    Route::post('/detail', function () {
-        return view('admin.detail_laporan');
-    })->name('laporan');
     Route::resource('pengaduan', AdminController::class);
 });
 

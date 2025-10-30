@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Laporan;
+use App\Models\Form;
 
 class AdminController extends Controller
 {
@@ -12,9 +12,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-         $pengaduans = Laporan::all();
+         $forms = Form::all();
 
-          return view('admin.Pengaduan', compact('pengaduans'));
+          return view('admin.Pengaduan', compact('forms'));
     }
     
     public function create()
