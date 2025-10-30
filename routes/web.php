@@ -27,8 +27,13 @@ Route::middleware('auth')->group(function () {
     // Form pengaduan siswa
     Route::resource('form', FormController::class);
 
+});
+
 Route::middleware('auth')->group(function(){
     Route::resource('/guru', GuruController::class);
+    Route::get('/detail', function () {
+        return view('admin.detail_laporan');
+    })->name('laporan');
     Route::post('/detail', function () {
         return view('admin.detail_laporan');
     })->name('laporan');
