@@ -1,6 +1,6 @@
 <div class="">
     <button onclick="toggleAccordion({{ $content
-     }})" class="w-full flex justify-between items-center py-5">
+     }})" class="w-full flex justify-between items-start md:items-center py-5">
         <span>{{ $title }}</span>
         <span id="icon-{{ $content
          }}" class="text-slate-800 transition-transform duration-300">
@@ -12,7 +12,7 @@
     </button>
     <div id="content-{{ $content
      }}" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-        <div class="pb-5 text-sm text-zinc-700">
+        <div class="pb-5 text-sm text-blue-900">
             {{ $slot }}
         </div>
     </div>
