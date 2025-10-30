@@ -12,7 +12,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-         return view('admin.pengaduan');
+         $pengaduans = Laporan::all();
+
+          return view('admin.Pengaduan', compact('pengaduans'));
     }
     
     public function create()
