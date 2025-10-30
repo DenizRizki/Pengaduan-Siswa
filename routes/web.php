@@ -39,7 +39,7 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->group(function(){
     Route::resource('/guru', GuruController::class);
-     Route::get('/detail', function () {
+    Route::post('/detail', function () {
         return view('admin.detail_laporan');
     })->name('laporan');
 });
