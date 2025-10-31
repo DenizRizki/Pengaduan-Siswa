@@ -36,9 +36,10 @@
                                     <span class="bg-green-500/90 text-white px-3 py-1 rounded-full text-xs font-medium shadow">
                                         Selesai
                                     </span>
-                                @else
+                                    <!-- Diedit Aksa -->
+                                @elseif ($p->status == 'ditangani')
                                     <span class="bg-red-500/90 text-white px-3 py-1 rounded-full text-xs font-medium shadow">
-                                        Menunggu
+                                        Ditangani
                                     </span>
                                 @endif
                             </td>
