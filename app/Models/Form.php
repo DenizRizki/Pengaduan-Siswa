@@ -14,6 +14,6 @@ class Form extends Model
         'gambar',
         'video',
         'audio',
-        
+        'status'
     ];
 }
