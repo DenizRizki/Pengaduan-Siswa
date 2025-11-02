@@ -200,7 +200,7 @@
 
                 <!-- Garis bawah kecil + copyright -->
                 <div
-                    class="max-w-6xl mx-auto px-6 mt-8 pt-6 border-t border-gray-200 text-sm flex flex-col md:flex-row justify-between items-center gap-2">
+                    class="mx-auto px-10 mt-8 pt-6 border-t border-gray-200 text-sm flex flex-col md:flex-row justify-between items-center gap-2">
                     <p>© 2025 Sistem Pengaduan Siswa. Dibuat oleh Tim Pengembang RPL.</p>
                     <p class="text-xs">Dibuat dengan Laravel dan ❤️</p>
                 </div>
