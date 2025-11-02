@@ -24,8 +24,13 @@ return new class extends Migration
             $table->text('deskripsi')->nullable();
             $table->string('tempat')->nullable();
             $table->string('gambar')->nullable();
-             $table->string('video')->nullable(); 
+            $table->string('video')->nullable(); 
             $table->string('audio')->nullable(); 
+            
+           
+            $table->enum('status', ['diproses', 'diterima', 'selesai'])
+                  ->default('diproses'); 
+            
             $table->timestamps();
         });
     }

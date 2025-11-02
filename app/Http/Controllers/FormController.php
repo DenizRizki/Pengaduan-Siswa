@@ -52,7 +52,7 @@ class FormController extends Controller
         }
 
         Form::create([
-            'nama_siswa' => $request->nama_siswa,
+            'nama_siswa' => $request->nama_siswa, 
             'kejadian' => $request->kejadian,
             'deskripsi' => $request->deskripsi,
             'tempat' => $request->tempat,
@@ -61,7 +61,8 @@ class FormController extends Controller
             'audio' => $audioPath,
         ]);
 
-        return redirect('/');
+       return redirect('/')->with('success', 'Laporan berhasil dikirim!');
+
     }
 
     /**

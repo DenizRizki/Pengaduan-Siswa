@@ -31,14 +31,14 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->group(function(){
     Route::resource('/guru', GuruController::class);
-    Route::get('/detail', function () {
-        return view('admin.detail_laporan');
-    })->name('laporan');
-    Route::post('/detail', function () {
-        return view('admin.detail_laporan');
+Route::get('/admin/pengaduan', [AdminController::class, 'index'])->name('admin.pengaduan');
+Route::get('/admin/pengaduan/{id}', [AdminController::class, 'show'])->name('pengaduan.show');
+Route::get('/admin/pengaduan/{id}/edit', [AdminController::class, 'edit'])->name('pengaduan.edit');
+Route::put('/admin/pengaduan/{id}', [AdminController::class, 'update'])->name('pengaduan.update');
+Route::post('/admin/pengaduan/{id}/status', [AdminController::class, 'updateStatus'])->name('admin.updateStatus');
+
     })->name('laporan');
     Route::resource('pengaduan', AdminController::class);
-});
 
 // Route untuk admin (CRUD laporan/pengaduan)
 Route::middleware(['auth'])->group(function () {

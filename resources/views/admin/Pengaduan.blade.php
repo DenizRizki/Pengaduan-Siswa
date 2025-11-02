@@ -13,45 +13,66 @@
                         <th class="px-6 py-3 text-left">Kelas</th>
                         <th class="px-6 py-3 text-left">Jenis Pengaduan</th>
                         <th class="px-6 py-3 text-left">Deskripsi</th>
+                        {{-- ✅ KOLOM BARU: GAMBAR --}}
+                        <th class="px-6 py-3 text-center">Gambar</th>
+                        {{-- /✅ --}}
                         <th class="px-6 py-3 text-left">Tanggal</th>
                         <th class="px-6 py-3 text-center">Status</th>
                         <th class="px-6 py-3 text-center">Aksi</th>
                     </tr>
                 </thead>
-                <tbody class="divide-y divide-sky-700/40 bg-gray-900/60">
-                    @foreach ($pengaduans as $index => $p)
-                        <tr class="hover:bg-sky-800/30 transition duration-200">
-                            <td class="px-6 py-3 text-gray-300">{{ $index + 1 }}</td>
-                            <td class="px-6 py-3 font-semibold">{{ $p->nama }}</td>
-                            <td class="px-6 py-3 text-gray-300">{{ $p->kelas }}</td>
-                            <td class="px-6 py-3 text-gray-300">{{ $p->kategori }}</td>
-                            <td class="px-6 py-3 text-gray-400">{{ $p->deskripsi }}</td>
-                            <td class="px-6 py-3 text-gray-300">{{ $p->created_at->format('d M Y') }}</td>
-                            <td class="px-6 py-3 text-center">
-                                @if ($p->status == 'diproses')
-                                    <span class="bg-yellow-400/90 text-black px-3 py-1 rounded-full text-xs font-medium shadow">
-                                        Diproses
-                                    </span>
-                                @elseif ($p->status == 'selesai')
-                                    <span class="bg-green-500/90 text-white px-3 py-1 rounded-full text-xs font-medium shadow">
-                                        Selesai
-                                    </span>
-                                    <!-- Diedit Aksa -->
-                                @elseif ($p->status == 'ditangani')
-                                    <span class="bg-red-500/90 text-white px-3 py-1 rounded-full text-xs font-medium shadow">
-                                        Ditangani
-                                    </span>
-                                @endif
-                            </td>
-                            <td class="px-6 py-3 text-center">
-                                <a href="{{ route('pengaduan.show', $p->id) }}" 
-                                   class="bg-sky-600 hover:bg-sky-700 text-white text-xs font-semibold px-4 py-1.5 rounded-lg shadow transition duration-200">
-                                   Detail
-                                </a>
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
+               <tbody class="divide-y divide-sky-700/40 bg-gray-900/60">
+    @foreach ($pengaduans as $index => $p)
+        <tr class="hover:bg-sky-800/30 transition duration-200">
+            <td class="px-6 py-3 text-gray-300">{{ $index + 1 }}</td>
+            <td class="px-6 py-3 font-semibold">{{ $p->nama_siswa }}</td>
+            <td class="px-6 py-3 text-gray-300">{{ $p->tempat }}</td>
+            <td class="px-6 py-3 text-gray-300">{{ $p->kejadian }}</td>
+            <td class="px-6 py-3 text-gray-400 max-w-[200px] truncate">{{ $p->deskripsi }}</td>
+            
+            {{-- ✅ DATA GAMBAR --}}
+            <td class="px-6 py-3 text-center">
+                @if ($p->gambar)
+                    <a href="{{ asset('storage/' . $p->gambar) }}" target="_blank" class="text-blue-400 hover:text-blue-200 underline text-xs">
+                        Lihat Bukti
+                    </a>
+                @else
+                    <span class="text-gray-500 text-xs italic">Nihil</span>
+                @endif
+            </td>
+            {{-- /✅ --}}
+            
+            <td class="px-6 py-3 text-gray-300">{{ $p->created_at->format('d M Y') }}</td>
+            <td class="px-6 py-3 text-center">
+                {{-- ✅ PERBAIKAN TAMPILAN STATUS --}}
+                @if ($p->status == 'diproses')
+                    <span class="bg-yellow-400/90 text-black px-3 py-1 rounded-full text-xs font-medium shadow">
+                        Diproses
+                    </span>
+                @elseif ($p->status == 'selesai')
+                    <span class="bg-green-500/90 text-white px-3 py-1 rounded-full text-xs font-medium shadow">
+                        Selesai
+                    </span>
+                @elseif ($p->status == 'diterima')
+                    <span class="bg-blue-500/90 text-white px-3 py-1 rounded-full text-xs font-medium shadow">
+                        Diterima 
+                    </span>
+                @else
+                     <span class="bg-gray-500/90 text-white px-3 py-1 rounded-full text-xs font-medium shadow">
+                        Tidak Diketahui
+                    </span>
+                @endif
+            </td>
+            <td class="px-6 py-3 text-center">
+                <a href="{{ route('pengaduan.show', $p->id) }}" 
+                   class="bg-sky-600 hover:bg-sky-700 text-white text-xs font-semibold px-4 py-1.5 rounded-lg shadow transition duration-200">
+                    Detail
+                </a>
+            </td>
+        </tr>
+    @endforeach
+</tbody>
+
             </table>
         </div>
     </div>
