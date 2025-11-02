@@ -166,7 +166,7 @@
             </section>
 
             <footer class="border-t border-gray-300 py-10">
-                <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-10">
+                <div class="px-10 flex flex-col md:flex-row justify-between gap-10">
                     <!-- Kolom 1: Identitas Sekolah -->
                     <div class="space-y-2">
                         <h2 class="text-lg font-semibold">SMK Informatika Pesat IT XPRO</h2>
