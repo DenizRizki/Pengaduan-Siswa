@@ -1,54 +1,58 @@
 <x-guru-layout>
     <x-slot name="header">
-        <div class="flex items-center justify-between">
-            <h2 class="font-semibold text-xl">
-                Pengaduan
-            </h2>
-
-            <form action="">
-                <div class="relative">
-                    <i class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-600"></i>
-                    <input type="text" name="search" placeholder="Search..."
-                        class="rounded-lg w-[18vw] bg-white pl-10 py-2 text-gray-600 shadow-sm focus:ring-2 focus:ring-sky-500 outline-none" />
-                </div>
-            </form>
-        </div>
+        <h1 class="text-xl font-bold text-white"> Laporan Pengaduan Siswa</h1>
     </x-slot>
 
-    <div class="min-h-screen bg--600 text-gray-100 p-6">
-        <div class="max-w-6xl mx-auto bg-gradient-to-r from-blue-700 via-blue-600 to-white rounded-3xl shadow-xl p-6">
-            <h1 class="text-3xl font-bold text-center mb-8 text-white">
-                Laporan Pengaduan Siswa
-            </h1>
-
-            <div class="overflow-x-auto rounded-lg border border-gray-700 shadow">
-                <table class="min-w-full text-sm">
-                    <thead class="bg-gray-700 text-gray-300 uppercase text-xs font-semibold">
-                        <tr>
-                            <th class="px-6 py-3 text-left">No</th>
-                            <th class="px-6 py-3 text-left">Nama Siswa</th>
-                            <th class="px-6 py-3 text-left">Kelas</th>
-                            <th class="px-6 py-3 text-left">Jenis Pengaduan</th>
-                            <th class="px-6 py-3 text-left">Deskripsi</th>
-                            <th class="px-6 py-3 text-left">Tanggal</th>
-                            <th class="px-6 py-3 text-center">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-700">
-                        <tr class="hover:bg-gray-750 transition">
-                            <td class="px-6 py-3">1</td>
-                            <td class="px-6 py-3 font-semibold text-gray-200">Bambang</td>
-                            <td class="px-6 py-3">Kelas King</td>
-                            <td class="px-6 py-3">Non-fiksi</td>
-                            <td class="px-6 py-3 text-gray-300">Makan Bang</td>
-                            <td class="px-6 py-3">17 Agustus 1945</td>
+    <div class="bg-gradient-to-br from-sky-500/20 to-sky-700/10 rounded-xl shadow-lg p-6 border border-sky-600/30">
+        <div class="overflow-x-auto">
+            <table class="min-w-full text-sm text-white">
+                <thead class="bg-gradient-to-r from-sky-600 to-sky-700 text-gray-100 uppercase text-xs font-semibold rounded-lg">
+                    <tr>
+                        <th class="px-6 py-3 text-left">No</th>
+                        <th class="px-6 py-3 text-left">Nama Siswa</th>
+                        <th class="px-6 py-3 text-left">Kelas</th>
+                        <th class="px-6 py-3 text-left">Jenis Pengaduan</th>
+                        <th class="px-6 py-3 text-left">Deskripsi</th>
+                        <th class="px-6 py-3 text-left">Tanggal</th>
+                        <th class="px-6 py-3 text-center">Status</th>
+                        <th class="px-6 py-3 text-center">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-sky-700/40 bg-gray-900/60">
+                    @foreach ($pengaduans as $index => $p)
+                        <tr class="hover:bg-sky-800/30 transition duration-200">
+                            <td class="px-6 py-3 text-gray-300">{{ $index + 1 }}</td>
+                            <td class="px-6 py-3 font-semibold">{{ $p->nama }}</td>
+                            <td class="px-6 py-3 text-gray-300">{{ $p->kelas }}</td>
+                            <td class="px-6 py-3 text-gray-300">{{ $p->kategori }}</td>
+                            <td class="px-6 py-3 text-gray-400">{{ $p->deskripsi }}</td>
+                            <td class="px-6 py-3 text-gray-300">{{ $p->created_at->format('d M Y') }}</td>
                             <td class="px-6 py-3 text-center">
-                                <span class="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs">Diproses</span>
+                                @if ($p->status == 'diproses')
+                                    <span class="bg-yellow-400/90 text-black px-3 py-1 rounded-full text-xs font-medium shadow">
+                                        Diproses
+                                    </span>
+                                @elseif ($p->status == 'selesai')
+                                    <span class="bg-green-500/90 text-white px-3 py-1 rounded-full text-xs font-medium shadow">
+                                        Selesai
+                                    </span>
+                                    <!-- Diedit Aksa -->
+                                @elseif ($p->status == 'ditangani')
+                                    <span class="bg-red-500/90 text-white px-3 py-1 rounded-full text-xs font-medium shadow">
+                                        Ditangani
+                                    </span>
+                                @endif
+                            </td>
+                            <td class="px-6 py-3 text-center">
+                                <a href="{{ route('pengaduan.show', $p->id) }}" 
+                                   class="bg-sky-600 hover:bg-sky-700 text-white text-xs font-semibold px-4 py-1.5 rounded-lg shadow transition duration-200">
+                                   Detail
+                                </a>
                             </td>
                         </tr>
-                    </tbody>
-                </table>
-            </div>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
-    </x-gu-layout>
+</x-guru-layout>

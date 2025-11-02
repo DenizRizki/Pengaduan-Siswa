@@ -61,7 +61,7 @@ class FormController extends Controller
             'audio' => $audioPath,
         ]);
 
-        return view('welcome');
+        return redirect('/');
     }
 
     /**
